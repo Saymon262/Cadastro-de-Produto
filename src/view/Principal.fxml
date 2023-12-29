@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="592.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.principalController">
+   <top>
+      <Label prefHeight="68.0" prefWidth="164.0" text="Padaria Trigo" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <HBox prefHeight="80.0" prefWidth="791.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Produto">
+               <HBox.margin>
+                  <Insets left="10.0" top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtProd">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" text="Valor unitário">
+               <HBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtVUnitario" layoutX="36.0" layoutY="10.0">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <Label layoutX="110.0" layoutY="10.0" text="Quantidade">
+               <HBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtQt" layoutX="114.0" layoutY="10.0">
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#btAd" text="Adicionar">
+               <HBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="438.0" prefWidth="791.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tbl" prefHeight="266.0" prefWidth="791.0">
+              <columns>
+                <TableColumn fx:id="colProd" prefWidth="424.0" text="Produto" />
+                <TableColumn fx:id="colVUnit" prefWidth="136.0" text="Vl Unitário" />
+                  <TableColumn fx:id="colQt" prefWidth="103.0" text="Qtdade" />
+                  <TableColumn fx:id="colSub" prefWidth="127.0" text="Sub Total" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblSDesc" alignment="BOTTOM_LEFT" text="Valor sem desconto R$: XXXX" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblDesc" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="232.0" text="Desconto concedido: YY%" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblVFinal" alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="249.0" text="Valor Final R$: ZZZZ" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="40.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

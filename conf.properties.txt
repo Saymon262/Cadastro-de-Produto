@@ -1,0 +1,3 @@
+nome = padaria Trigo
+vlMinDesc10:10
+vlMinDesc20:20
